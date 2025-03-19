@@ -1,0 +1,23 @@
+{
+  "name": "task-2.2p",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashoksadineni/Sit725_prac1.git"
+  },
+  "author": "Ashoksadineni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ashoksadineni/Sit725_prac1/issues"
+  },
+  "homepage": "https://github.com/Ashoksadineni/Sit725_prac1#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "keywords": [],
+  "description": ""
+}
