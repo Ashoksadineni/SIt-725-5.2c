@@ -1,0 +1,23 @@
+{
+  "name": "task3.1p",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashoksadineni/Sit725_prac1.git"
+  },
+  "author": "Ashoksadineni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ashoksadineni/Sit725_prac1/issues"
+  },
+  "homepage": "https://github.com/Ashoksadineni/Sit725_prac1#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1"
+  }
+}
