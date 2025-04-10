@@ -17,6 +17,7 @@
   "homepage": "https://github.com/Ashoksadineni/Sit725_prac1#readme",
   "description": "",
   "dependencies": {
+    "ejs": "^3.1.10",
     "express": "^4.21.2",
     "mongoose": "^8.13.1"
   }

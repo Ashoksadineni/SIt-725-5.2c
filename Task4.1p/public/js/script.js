@@ -1,18 +1,18 @@
 
-// const cardList = [
-//     {
-//         title: "fertiliser",
-//         image: "images/fertiliser .jpeg",
-//         link: "About fertiliser",
-//         desciption: " The sprayer is loaded with liquid fertiliser to efficiently distribute the fertiliser to the crops"
-//     },
-//     {
-//         title: "Harvester",
-//         image: "images/Harvester.jpeg",
-//         link: "About  Harvester",
-//         desciption: "in the context of farming refers to a machine, often a combine harvester, that cuts, threshes, and cleans crops, streamlining the harvesting process and saving labor and time"
-//     }
-// ]
+const cardList = [
+    {
+        title: "fertiliser",
+        image: "images/fertiliser .jpeg",
+        link: "About fertiliser",
+        desciption: " The sprayer is loaded with liquid fertiliser to efficiently distribute the fertiliser to the crops"
+    },
+    {
+        title: "Harvester",
+        image: "images/Harvester.jpeg",
+        link: "About  Harvester",
+        desciption: "in the context of farming refers to a machine, often a combine harvester, that cuts, threshes, and cleans crops, streamlining the harvesting process and saving labor and time"
+    }
+]
 
 const addCards = (items) => {
     items.forEach(item => {
@@ -28,8 +28,15 @@ const addCards = (items) => {
     });
 }
 
-const clickMe = () => {
-    alert("Thanks for clicking me. Hope you have a nice day!")
+// const clickMe = () => {
+//     alert("Thanks for clicking me. Hope you have a nice day!")
+// }
+const getProjects = () => {
+    $.get('/api/projects',(response) => {
+        if(response.statusCode==200){
+            addCards(response.data);
+        }
+    })
 }
 
 const submitForm = () => {
@@ -40,6 +47,14 @@ const submitForm = () => {
     formData.email = $('#email').val();
 
     console.log("Form Data Submitted: ", formData);
+    $.get('/api/projects', formData, (response)=>{
+        if(response.statusCode==200){
+            // addCards(response.data);
+        }
+
+        
+        
+    });
 }
 
 $(document).ready(function(){
@@ -47,15 +62,7 @@ $(document).ready(function(){
     $('#formSubmit').click(()=>{
         submitForm();
     })
-    getProjects();
+    // getprojects();
+    addCards(cardList);
     $('.modal').modal();
 }); 
-
-const getProjects = () => {
-    $.get('/api/projects',(response) => {
-    if(response.statusCode==200){
-    addCards(response.data);
-    }
-    })
-    }
-    
