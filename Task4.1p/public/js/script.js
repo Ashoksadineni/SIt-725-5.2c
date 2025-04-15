@@ -1,9 +1,9 @@
 
 const cardList = [
     {
-        title: "fertiliser",
-        image: "images/fertiliser .jpeg",
-        link: "About fertiliser",
+        title: "fertilizer",
+        image: "images/fertilizer .jpeg",
+        link: "About fertilizer",
         desciption: " The sprayer is loaded with liquid fertiliser to efficiently distribute the fertiliser to the crops"
     },
     {
